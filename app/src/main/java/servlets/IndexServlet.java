@@ -12,8 +12,9 @@ import jakarta.servlet.http.HttpServletResponse;
 public class IndexServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response )
     throws ServletException, IOException {
-        response.getWriter().println("OI Servlet!!!");
-        response.getWriter().close();
+       // response.getWriter().println("OI Servlet!!!");
+        //response.getWriter().close();
+        request.getRequestDispatcher("home.jsp").forward(request, response);
     }
     
 }
