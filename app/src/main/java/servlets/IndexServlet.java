@@ -14,7 +14,9 @@ public class IndexServlet extends HttpServlet{
     throws ServletException, IOException {
        // response.getWriter().println("OI Servlet!!!");
         //response.getWriter().close();
-        request.getRequestDispatcher("home.jsp").forward(request, response);
+        String nome = request.getParameter("nome");
+        request.setAttribute("nome", nome);
+        request.getRequestDispatcher("WEB-INF/home.jsp").forward(request, response);
     }
     
 }
